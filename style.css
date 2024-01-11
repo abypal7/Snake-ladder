@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 98vh;
+    width: 98vw;
+    position: absolute;
+    margin: auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+#main{
+    flex: 50%;
+}
+
+#side,#winnersList{
+    flex: 25%;
+    text-align: center;
+    font-size: x-large;
+}
+
+#side-box{
+    background-color: lightgreen;
+    height: 30%;
+    width: 90%;
+    border: 1px solid black;
+    padding: 2.5%;
+}
+
+#winnersList-box{
+    float: right;
+    background-color: lightgreen;
+    height: 60%;
+    width: 90%;
+    border: 1px solid black;
+    padding: 2.5%;
+}
+
+#cube_outer{
+    height:50px;
+    width:50px;
+    perspective:200px;
+    margin:auto;
+}
+
+#cube_inner{
+    height:100%;
+    width:100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition:all 0.75s linear;
+}
+
+#cube_inner div{
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+#board{
+    margin: auto;
+    width:96%;
+    position: relative;
+}
+
+#board-pic{
+    height:100%;
+    width:100%;
+}
+
+#cube_inner img{
+    height:100%;
+    width:100%;
+}
+
+#front{
+    transform:translateZ(25px);
+}
+
+#back{
+    transform:rotateY(180deg) translateZ(25px); 
+}
+
+#left{
+    transform:rotateY(-90deg) translateX(-25px); 
+    transform-origin:left; 
+}
+
+#right{
+    transform:rotateY(90deg) translateX(25px); 
+    transform-origin:right; 
+}
+
+#top{
+    transform:rotateX(-90deg) translateY(-25px); 
+    transform-origin:top; 
+}
+
+#bottom{
+    transform:rotateX(90deg) translateY(25px); 
+    transform-origin:bottom; 
+}
+
+.players{
+    position:absolute;
+    top:0;
+    left:0;
+    margin-top:93%; 
+    margin-left:3%;
+    height: 4%;
+    width: 4%;
+    border-radius: 50%;  
+    opacity: 0.7;
+    transition-duration:0.4s;
+    transition-property: margin;
+}
